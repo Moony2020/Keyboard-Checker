@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+Author: Mymoon
+-->
+<html lang="sv">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="favicon.ico" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
+        <title>Typing Speed Test</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>TouchTyping</h1>
+        </header>
+
+        <main>
+            <section id="settings">
+                <label>Select Text</label>
+                <select id="textSelector">
+                    <option id="text"></option>
+                </select>
+            </section>
+
+            <form class="align-left">
+                <input type="checkbox" id="ignorecase" name="ignorecase"> Ignore Casing
+            </form><br><br>
+
+            <form class="align-left">
+                <label>
+                    <input type="radio" name="language" value="Swedish" id="swedishRadio" checked> Swedish
+                </label>
+                <label>
+                    <input type="radio" name="language" value="English" id="englishRadio"> English
+                </label>
+            </form><br><br>
+
+            <section class="rounded-border">
+                <h1 id="h1title">Title</h1>
+                <h2 id="h2author">Author</h2>
+                <p id="wordCount" id="charCount"></p>br
+                <p id="textToSpeedWrite">Text</p>
+            </section><br>
+            <section id="input-section">
+                <label for="userInput"></label>
+                <input type="text" id="writingbox" placeholder="Type here..." />
+            </section>
+
+            <button type="button" id="startstopbutton"></button><br><br>
+            <section class="statistics-box">
+                <p>Gross WPM:<span id="grosswpm">0</span> Accuracy: %<span id="accuracy"></span></p>
+                <p>Net WPM:<span id="netwpm"></span> Errors:<span id="errors"> </span></p>
+            </section>
+
+            <canvas id="speedChart">Can't display canvas</canvas>
+        </main>
+        <audio id="errorSound" src="audio/wrong-char.mp3"></audio>
+
+
+
+        <footer>
+            <p>Copyright &copy; 2024 Mymoon. No right reserved. <br> <a href="mailto:mymoon676@hotmail.com">Contact
+                    me</a></p>
+        </footer>
+        <script src="js/app.js"></script>
+
+    </body>
+
+</html>

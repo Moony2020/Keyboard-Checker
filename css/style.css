@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'FirstFont';
+    src: url('../font/slkscr.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SecondFont';
+    src: url('../font/slkscreb.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'YourFirstFont', cursive-serif;
+    /* background of the page*/
+    background-image: url(../img/background.png);
+    /* Replace 'your-image-url.jpg' with the actual path to your image */
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+    background-image: url(../img/headerImg.png);
+    background-repeat: no-repeat;
+    background-size: auto 90%;
+    background-position: calc(35% - 10px) center;
+    animation: colorChange 5s infinite;
+    /* Repeating color change animation */
+}
+
+@keyframes colorChange {
+    0% {
+        color: rgb(164, 224, 73);
+    }
+
+    50% {
+        color: rgb(84, 186, 236);
+    }
+
+    100% {
+        color: rgb(226, 63, 63);
+    }
+}
+
+main {
+    width: 50%;
+    margin: 20px auto;
+}
+
+#settings label {
+    display: block;
+    top: -20px;
+    /* Adjust the margin-top as needed */
+    color: #f5f5f5;
+    /* Add some margin for spacing */
+}
+
+.align-left {
+    text-align: left;
+    display: inline-block;
+    margin-right: 10px;
+    color: #f5f5f5;
+    font-weight: bold;
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-top: -30px;
+}
+
+#textSelector {
+    background-color: #a89b17;
+    width: 210px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: -12px;
+}
+
+#text {
+    border: 2px solid yellow;
+    background-color: black;
+    border-radius: 8px;
+    color: white;
+    padding: 5px;
+    margin-bottom: -192px;
+    /* Add padding for better appearance */
+}
+
+#writingbox {
+    width: 30%;
+    height: 8px;
+    margin: 5px auto;
+    display: block;
+    border: 2px solid yellow;
+    background-color: #0b0b0b;
+    color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#settings {
+    text-align: right;
+    margin-bottom: 0;
+}
+
+
+
+/* Style the selected option */
+#textSelector option:checked {
+    background-color: yellow;
+    color: black;
+    /* Adjust text color for better visibility */
+}
+
+#startstopbutton {
+    display: block;
+    margin: 29px auto;
+    width: 50px;
+    height: 50px;
+    padding: 14px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.statistics-box {
+    color: rgb(230, 210, 210);
+    width: 50%;
+    /* Set width to 50% */
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 100px;
+    margin-top: -36px;
+    float: right;
+    /* Align statistics-box to the right */
+}
+
+.statistics-box p {
+    margin-bottom: 10px;
+}
+
+.margin-right {
+    margin-right: 10px;
+    /* Adjust the margin as needed */
+}
+
+#h1title {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#h2author {
+    color: yellow;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.count-details {
+    font-size: 0.6em;
+    /* Adjust the font size for words and characters */
+}
+
+/* Add a clear fix for the container */
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#textToSpeedWrite {
+    color: white;
+}
+
+#textToSpeedWrite p {
+    color: yellow;
+    text-align: center;
+}
+
+#textToSpeedWrite span.current-char {
+    background-color: rgb(113, 113, 111);
+    /*Change the color as needed*/
+}
+
+.rounded-border {
+    border: 2px solid yellow;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.rounded-border #textToSpeedWrite {
+    padding: 10px;
+    margin-top: -60px;
+    border-radius: 15px;
+}
+
+#speedChart {
+    width: 30%;
+    height: 100px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: -30px;
+    float: left;
+    /* Align speedChart to the left */
+}
+
+/* Add a clear fix for the container */
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.correct-char {
+    color: rgb(156, 233, 156);
+    /* Color for correctly entered characters */
+}
+
+.incorrect-char {
+    color: red;
+    /* Color for incorrect characters */
+}
+
+.current-char {
+    color: yellow;
+    /* Highlight color for the current character */
+}
+
+/* 
+.correct-char {
+    color: #87CEEB;
+    /* Color for correctly entered characters (skyblue) *
+}
+
+.current-char {
+    color: inherit;
+    /* Reset color for the current character *
+}
+
+.incorrect-char {
+    color: #f4ce8b;
+    /* Color for incorrect characters (red) *
+}
+*/
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #cfec5a;
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        background-position: left;
+    }
+}
